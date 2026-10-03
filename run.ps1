@@ -2,13 +2,15 @@
     One-line launcher for Update-NetworkChipsetDrivers.ps1 (network + chipset drivers).
 
     Run in PowerShell on any laptop (admin or not; it asks for admin rights itself):
-        irm https://raw.githubusercontent.com/fassysam/driver-update/main/run.ps1 | iex
+        irm fassysam.github.io/driver-update | iex
 
     With options, e.g. preview only, or use the laptop maker's tool + Windows Update instead:
-        & ([scriptblock]::Create((irm https://raw.githubusercontent.com/fassysam/driver-update/main/run.ps1))) -ListOnly
-        & ([scriptblock]::Create((irm https://raw.githubusercontent.com/fassysam/driver-update/main/run.ps1))) -Source Auto
+        & ([scriptblock]::Create((irm fassysam.github.io/driver-update))) -ListOnly
+        & ([scriptblock]::Create((irm fassysam.github.io/driver-update))) -Source Auto
 
     Defaults to -Source Catalog. The script and its logs are kept in C:\ProgramData\DriverUpdate.
+    (The short link is GitHub Pages serving this file through index.html. Don't put two curly braces
+    next to each other in this file: Pages would treat them as template code.)
 #>
 param([Parameter(ValueFromRemainingArguments = $true)][string[]]$ScriptArgs)
 

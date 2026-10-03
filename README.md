@@ -7,7 +7,7 @@ Finds and installs the latest **network** (Wi-Fi, Ethernet) and **chipset** driv
 Open PowerShell on the laptop and run:
 
 ```powershell
-irm https://raw.githubusercontent.com/fassysam/driver-update/main/run.ps1 | iex
+irm fassysam.github.io/driver-update | iex
 ```
 
 It asks for administrator rights, then updates the drivers. Logs are saved in `C:\ProgramData\DriverUpdate`.
@@ -15,7 +15,7 @@ It asks for administrator rights, then updates the drivers. Logs are saved in `C
 To preview without installing anything:
 
 ```powershell
-& ([scriptblock]::Create((irm https://raw.githubusercontent.com/fassysam/driver-update/main/run.ps1))) -ListOnly
+& ([scriptblock]::Create((irm fassysam.github.io/driver-update))) -ListOnly
 ```
 
 ## How it finds drivers
